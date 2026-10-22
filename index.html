@@ -12,14 +12,14 @@
 body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
 a{color:var(--ac);text-decoration:none}
-.w{max-width:1040px;margin:0 auto;padding:0 20px}
+.w{max-width:1200px;margin:0 auto;padding:0 32px}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
 nav .w{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
 .logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--ac)}
 .links{display:flex;flex:1;justify-content:space-evenly;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.links::-webkit-scrollbar{display:none}.links a{color:var(--mu);font-size:14px;white-space:nowrap;padding:4px 0;position:relative}.links a:hover{color:var(--ac)}.links a.active{color:var(--ac)}.links a.active::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ac),var(--ac2))}
 #th{border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:50%;width:34px;height:34px;cursor:pointer;flex:none}
 #mb{display:none;border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:18px;flex:none;align-items:center;justify-content:center}
-.hero{padding:72px 0 56px;display:grid;gap:28px;grid-template-columns:1.3fr 1fr;align-items:center}
+.hero{padding:80px 0 64px;display:grid;gap:40px;grid-template-columns:1.4fr 1fr;align-items:center}
 .pill{display:inline-block;padding:4px 12px;border:1px solid var(--bd);border-radius:99px;font-size:13px;color:var(--mu);background:var(--sf)}
 h1{font-size:clamp(34px,6vw,58px);line-height:1.1;margin:14px 0 10px}
 h1 em{font-style:normal;background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -35,12 +35,16 @@ button.btn{cursor:pointer;font:inherit;font-weight:600;font-size:15px}
 section{padding:54px 0}
 h2{font-size:28px;margin:0 0 6px}h2::after{content:"";display:block;width:48px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--ac),var(--ac2));margin-top:8px}
 .sub{color:var(--mu);margin:0 0 26px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .card{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:20px;box-shadow:var(--sh)}
 .card h3{margin:0 0 10px;font-size:16px}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-size:12.5px;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--ac) 12%,transparent);color:var(--ac);font-weight:600}
 .tag.t2{background:color-mix(in srgb,var(--ac2) 14%,transparent);color:var(--ac2)}
+.tag.t3{background:color-mix(in srgb,#f59e0b 14%,transparent);color:#d97706}
+.tag.t4{background:color-mix(in srgb,#bf05ee 14%,transparent);color:#bf05ee}
+.tag.t5{background:color-mix(in srgb,#ec4899 14%,transparent);color:#db2777}
+.tag.t6{background:color-mix(in srgb,#f5061e 14%,transparent);color:#f5061e}
 .tl{border-left:2px solid var(--bd);padding-left:22px;position:relative}
 .tl::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ac)}
 .tl .d{font-size:13px;color:var(--mu)}.tl h3{margin:2px 0}
@@ -60,6 +64,19 @@ details li{font-size:14.5px;color:var(--mu)}
 .contact{text-align:center}.contact h2::after{margin-left:auto;margin-right:auto}
 .cl{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
 footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
+@media(min-width:1200px){
+.hero{padding:96px 0 72px;gap:56px}
+.stat b{font-size:32px}
+.grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:761px) and (max-width:1199px){
+.hero{padding:64px 0 52px;gap:32px;grid-template-columns:1.3fr 1fr}
+.av{width:150px;height:150px}
+.stat{padding:14px}
+.stat b{font-size:24px}
+.grid{grid-template-columns:repeat(2,1fr)}
+.btns .btn{font-size:14px;padding:10px 16px}
+}
 @media(max-width:760px){
 .hero{grid-template-columns:1fr;padding-top:44px}
 .side{order:-1;text-align:center}
@@ -88,10 +105,10 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 <header class="hero" id="top">
 <div>
 <span class="pill">Open to software developer roles</span>
-<h1>Hi, I’m <em>Buvana Ragupathy</em></h1>
+<h1>Hi, I'm <em>Buvana Ragupathy</em></h1>
 <p style="font-size:20px;margin:0 0 8px;font-weight:600">Software Developer</p>
 <p class="lead">I build enterprise approval and ticketing applications with PHP, Laravel and MySQL, including SAP integration. I have worked on 4 real company applications. I built one of them completely by myself.</p>
-<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn rs" href="Documents/Buvana_Ragupathy_Software_Developer_Resume.pdf" download>Download resume</a><a class="btn" href="mailto:buvanaragupathy2023@gmail.com">Email me</a><a class="btn" href="https://github.com/Buvana-Ragupathy-Dev">GitHub</a></div>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn rs" href="Documents/Buvana_Ragupathy_Software_Developer_Resume.pdf" download>Download resume</a><a class="btn" href="mailto:buvanaragupathy2023@gmail.com">Email me</a><a class="btn" href="https://linkedin.com/in/buvana-ragupathy">LinkedIn</a><a class="btn" href="https://github.com/Buvana-Ragupathy-Dev">GitHub</a></div>
 </div>
 <div class="side"><img class="av" id="photo" alt="Buvana Ragupathy" src="Documents/Buvana_Ragupathy_Photo.jpg">
 <div class="stats">
@@ -104,16 +121,18 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 
 <section id="about">
 <h2>About</h2><p class="sub">Workflow-focused developer from Cuddalore, Tamil Nadu.</p>
-<div class="card"><p style="margin:0 0 12px">I’m a software developer from Cuddalore who likes turning real business rules into software people can rely on every day. Most of my work is around approval workflows: who acts next, what happens on a rejection, and how to keep things moving with the right alerts.</p><p style="margin:0 0 12px">I enjoy owning what I build, from the database schema to the screens, and supporting it after it goes live. Outside work, I built Leave Tracker on my own to keep learning full-stack development with React, Node.js and MySQL.</p><p style="margin:0">I’m now looking for a software developer role where I can keep building and growing on real systems.</p></div>
+<div class="card"><p style="margin:0 0 12px">I'm a software developer from Cuddalore who likes turning real business rules into software people can rely on every day. Most of my work is around approval workflows: who acts next, what happens on a rejection, and how to keep things moving with the right alerts.</p><p style="margin:0 0 12px">I enjoy owning what I build, from the database schema to the screens, and supporting it after it goes live. Outside work, I built Leave Tracker on my own to keep learning full-stack development with React.js, Node.js and MySQL.</p><p style="margin:0">I'm now looking for a software developer role where I can keep building and growing on real systems.</p></div>
 </section>
 
 <section id="skills">
-<h2>Skills</h2><p class="sub">What I use day to day, and what I’m familiar with.</p>
+<h2>Skills</h2><p class="sub">What I work with across the stack.</p>
 <div class="grid">
-<div class="card"><h3>Core</h3><div class="tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span><span class="tag">Git &amp; GitHub</span><span class="tag">Postman</span></div></div>
-<div class="card"><h3>Familiar with</h3><div class="tags"><span class="tag t2">CodeIgniter</span><span class="tag t2">Java</span><span class="tag t2">Spring Boot</span><span class="tag t2">React</span><span class="tag t2">Node.js</span><span class="tag t2">Express</span><span class="tag t2">MongoDB</span><span class="tag t2">Python (basics)</span></div></div>
-<div class="card"><h3>Concepts &amp; tools</h3><div class="tags"><span class="tag">OOP</span><span class="tag">Debugging</span><span class="tag">Performance optimization</span><span class="tag">DSA fundamentals</span><span class="tag">VS Code</span><span class="tag">IntelliJ IDEA</span></div></div>
-<div class="card"><h3>AI-assisted development</h3><div class="tags"><span class="tag t2">GitHub Copilot</span><span class="tag t2">ChatGPT</span><span class="tag t2">Claude</span><span class="tag t2">Gemini</span><span class="tag t2">Amazon Q</span><span class="tag t2">Zencoder</span></div></div>
+<div class="card"><h3>Backend</h3><div class="tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">CodeIgniter</span><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">REST APIs</span><span class="tag">Python (basics)</span></div></div>
+<div class="card"><h3>Frontend</h3><div class="tags"><span class="tag t2">HTML</span><span class="tag t2">CSS</span><span class="tag t2">JavaScript</span><span class="tag t2">Bootstrap</span><span class="tag t2">React.js</span></div></div>
+<div class="card"><h3>Databases</h3><div class="tags"><span class="tag t3">MySQL</span><span class="tag t3">MongoDB</span></div></div>
+<div class="card"><h3>Tools</h3><div class="tags"><span class="tag t6">Git &amp; GitHub</span><span class="tag t6">Postman (API testing)</span><span class="tag t6">VS Code</span><span class="tag t6">IntelliJ IDEA</span></div></div>
+<div class="card"><h3>Concepts</h3><div class="tags"><span class="tag t4">Object-Oriented Programming (OOP)</span><span class="tag t4">Debugging</span><span class="tag t4">Performance optimization</span><span class="tag t4">DSA fundamentals</span></div></div>
+<div class="card"><h3>AI-Assisted Development</h3><div class="tags"><span class="tag t5">GitHub Copilot</span><span class="tag t5">ChatGPT</span><span class="tag t5">Claude</span><span class="tag t5">Gemini</span><span class="tag t5">Amazon Q</span><span class="tag t5">Zencoder</span></div></div>
 </div>
 </section>
 
@@ -121,9 +140,9 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 <h2>Experience</h2><p class="sub">Live production work in enterprise environments.</p>
 <div class="card tl">
 <div class="d">Dec 2024 – Jan 2026 · Cuddalore, Tamil Nadu</div>
-<h3>Trainee Software Developer</h3><div style="color:var(--mu)">Hema’s Enterprises Private Limited</div>
+<h3>Trainee Software Developer</h3><div style="color:var(--mu)">Hema's Enterprises Private Limited</div>
 <ul>
-<li>Developed and supported enterprise approval and ticketing applications in production using PHP, Laravel, CodeIgniter, React, Java and MySQL.</li>
+<li>Developed and supported enterprise approval and ticketing applications in production using PHP, Laravel, CodeIgniter, React.js, Java and MySQL.</li>
 <li>Started on iView under a senior developer, then took over its maintenance, enhancements and support; independently built the Sales Return application from the start.</li>
 <li>Built role-based approval workflows with email notifications and SAP integration; worked with business, QA, SAP and support teams.</li>
 <li>Debugged and tested applications (APIs with Postman), optimized database queries and assisted with production deployments with minimal downtime.</li>
@@ -158,7 +177,7 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 <li>L2 rejections go back to L1; L1 rejections land in a trackable Rejected tab</li>
 <li>Automatic email to zonal managers after final approval</li>
 <li>Designed, built, tested and supported solo</li></ul></details>
-<div class="tags"><span class="tag">React</span><span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">SAP</span></div>
+<div class="tags"><span class="tag">React.js</span><span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">SAP</span></div>
 </article>
 
 <article class="card proj" data-c="work">
@@ -178,12 +197,12 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 <details><summary>Highlights</summary><ul>
 <li>ASM and RSSM approval workflows within the MyBuddy sales flow</li>
 <li>Synchronized employee, salary and sales reporting data</li></ul></details>
-<div class="tags"><span class="tag">CodeIgniter</span><span class="tag">React</span><span class="tag">Java</span><span class="tag">MySQL</span></div>
+<div class="tags"><span class="tag">CodeIgniter</span><span class="tag">React.js</span><span class="tag">Java</span><span class="tag">MySQL</span></div>
 </article>
 
 <article class="card proj" data-c="personal">
 <span class="k">Personal Project · Built solo</span><h3>Leave Tracker</h3>
-<p>A full-stack leave management app where employees apply and track leave, managers approve their team’s requests, and admins manage employees and the holiday calendar.</p>
+<p>A full-stack leave management app where employees apply and track leave, managers approve their team's requests, and admins manage employees and the holiday calendar.</p>
 <div class="flow"><i>Apply</i>→<i>Validate</i>→<i>Manager review</i>→<i>Balance update</i>→<i>Audit log</i></div>
 <details><summary>Highlights</summary><ul>
 <li>JWT auth, role-based access and multi-role users (e.g. manager and employee)</li>
@@ -191,7 +210,7 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 <li>Overlap prevention; balance deducted on approval inside a database transaction</li>
 <li>Append-only audit log, readable ticket numbers, search, filters and pagination</li>
 <li>AES-128-CBC encrypted IDs in URLs; counting and filtering done in SQL</li></ul></details>
-<div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span><span class="tag">JWT</span></div>
+<div class="tags"><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MySQL</span><span class="tag">JWT</span></div>
 </article>
 
 <article class="card proj" data-c="edu">
@@ -228,13 +247,13 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 </div>
 <div class="card tl" style="margin-top:16px">
 <div class="d">2020 – 2023</div><h3>Bachelor of Computer Applications (BCA)</h3>
-<div style="color:var(--mu)">St. Joseph’s College of Arts &amp; Science, affiliated to Thiruvalluvar University</div>
+<div style="color:var(--mu)">St. Joseph's College of Arts &amp; Science, affiliated to Thiruvalluvar University</div>
 <div class="tags" style="margin-top:10px"><span class="tag">CGPA 8.15 / 10</span></div>
 </div>
 </section>
 
 <section id="contact" class="contact">
-<h2>Let’s work together</h2>
+<h2>Let's work together</h2>
 <p class="sub">Looking for software developer roles. Get in touch.</p>
 <div class="cl">
 <a class="btn p" href="mailto:buvanaragupathy2023@gmail.com">buvanaragupathy2023@gmail.com</a>
