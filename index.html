@@ -16,7 +16,7 @@ a{color:var(--ac);text-decoration:none}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
 nav .w{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
 .logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--ac)}
-.links{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.links::-webkit-scrollbar{display:none}.links a{color:var(--mu);font-size:14px;white-space:nowrap;padding:4px 0;position:relative}.links a:hover{color:var(--ac)}.links a.active{color:var(--ac)}.links a.active::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ac),var(--ac2))}
+.links{display:flex;flex:1;justify-content:space-evenly;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.links::-webkit-scrollbar{display:none}.links a{color:var(--mu);font-size:14px;white-space:nowrap;padding:4px 0;position:relative}.links a:hover{color:var(--ac)}.links a.active{color:var(--ac)}.links a.active::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ac),var(--ac2))}
 #th{border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:50%;width:34px;height:34px;cursor:pointer;flex:none}
 #mb{display:none;border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:18px;flex:none;align-items:center;justify-content:center}
 .hero{padding:72px 0 56px;display:grid;gap:28px;grid-template-columns:1.3fr 1fr;align-items:center}
@@ -257,8 +257,11 @@ document.querySelectorAll('.f').forEach(function(f){f.onclick=function(){
 document.querySelectorAll('.f').forEach(function(x){x.classList.remove('on')});f.classList.add('on');
 var k=f.dataset.f;document.querySelectorAll('#pg .proj').forEach(function(p){p.classList.toggle('hid',k!=='all'&&p.dataset.c.split(' ').indexOf(k)<0)})}});
 var secs=document.querySelectorAll('section[id],header[id]'),navLinks=nl.querySelectorAll('a[href^="#"]');
-var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var id=e.target.id;navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+var activeSecs=new Set(),paused=false;
+function setActive(id){navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id)});}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){activeSecs.add(e.target)}else{activeSecs.delete(e.target)}});if(paused)return;var last=null;secs.forEach(function(s){if(activeSecs.has(s))last=s});if(last){setActive(last.id);}},{rootMargin:'-20% 0px -20% 0px'});
 secs.forEach(function(s){io.observe(s)});
+navLinks.forEach(function(a){a.addEventListener('click',function(){var id=a.getAttribute('href').slice(1);setActive(id);paused=true;clearTimeout(a._t);a._t=setTimeout(function(){paused=false;},1000);});});
 </script>
 </body>
 </html>
