@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buvana Ragupathy – Software Developer</title>
+<style>
+:root{--bg:#f7f8fc;--sf:#fff;--tx:#161a2b;--mu:#5d647c;--ac:#5b5bf0;--ac2:#14b8a6;--bd:#e3e6f0;--sh:0 8px 28px rgba(40,50,120,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1020;--sf:#161a30;--tx:#eceefa;--mu:#9aa1c0;--ac:#8b8bff;--ac2:#2dd4bf;--bd:#262b4a;--sh:0 8px 28px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1020;--sf:#161a30;--tx:#eceefa;--mu:#9aa1c0;--ac:#8b8bff;--ac2:#2dd4bf;--bd:#262b4a;--sh:0 8px 28px rgba(0,0,0,.4);color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--ac);text-decoration:none}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--ac)}
+.links{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none}.links a{color:var(--mu);font-size:14px;white-space:nowrap}.links a:hover{color:var(--ac)}
+#th{border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:50%;width:34px;height:34px;cursor:pointer;flex:none}
+.hero{padding:72px 0 56px;display:grid;gap:28px;grid-template-columns:1.3fr 1fr;align-items:center}
+.pill{display:inline-block;padding:4px 12px;border:1px solid var(--bd);border-radius:99px;font-size:13px;color:var(--mu);background:var(--sf)}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.1;margin:14px 0 10px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mu);max-width:560px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--bd);background:var(--sf);color:var(--tx)}
+.btn.p{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#fff;border:0}
+.av{display:block;width:170px;height:170px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:4px solid var(--sf);box-shadow:0 0 0 3px var(--ac),var(--sh)}
+button.btn{cursor:pointer;font:inherit;font-weight:600;font-size:15px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:18px;box-shadow:var(--sh)}
+.stat b{display:block;font-size:28px;color:var(--ac)}.stat span{font-size:13px;color:var(--mu)}
+section{padding:54px 0}
+h2{font-size:28px;margin:0 0 6px}h2::after{content:"";display:block;width:48px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--ac),var(--ac2));margin-top:8px}
+.sub{color:var(--mu);margin:0 0 26px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:20px;box-shadow:var(--sh)}
+.card h3{margin:0 0 10px;font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12.5px;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--ac) 12%,transparent);color:var(--ac);font-weight:600}
+.tag.t2{background:color-mix(in srgb,var(--ac2) 14%,transparent);color:var(--ac2)}
+.tl{border-left:2px solid var(--bd);padding-left:22px;position:relative}
+.tl::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ac)}
+.tl .d{font-size:13px;color:var(--mu)}.tl h3{margin:2px 0}
+ul{padding-left:18px;margin:10px 0}li{margin:5px 0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.f{border:1px solid var(--bd);background:var(--sf);color:var(--tx);padding:6px 14px;border-radius:99px;cursor:pointer;font-size:14px}
+.f.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.proj{display:flex;flex-direction:column;gap:10px;transition:transform .2s}.proj:hover{transform:translateY(-4px)}
+.proj .k{font-size:12px;color:var(--ac2);font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.proj h3{margin:0;font-size:18px}.proj p{margin:0;color:var(--mu);font-size:15px}
+.flow{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font-size:12px;color:var(--mu)}
+.flow i{font-style:normal;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:2px 7px}
+details summary{cursor:pointer;color:var(--ac);font-weight:600;font-size:14px}
+details[open] summary{margin-bottom:6px}
+details li{font-size:14.5px;color:var(--mu)}
+.hid{display:none}
+.contact{text-align:center}.contact h2::after{margin-left:auto;margin-right:auto}
+.cl{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
+footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:44px}.logo+.links{flex:1}}
+</style>
+</head>
+<body>
+<nav><div class="w"><div class="logo">BR<span>.</span></div>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#projects">Projects</a><a href="#edu">Education</a><a href="#contact">Contact</a></div>
+<button id="th" aria-label="Toggle theme">◐</button></div></nav>
+
+<main class="w">
+<header class="hero" id="top">
+<div>
+<span class="pill">Open to software developer roles</span>
+<h1>Hi, I’m <em>Buvana Ragupathy</em></h1>
+<p style="font-size:20px;margin:0 0 8px;font-weight:600">Software Developer</p>
+<p class="lead">I build enterprise approval and ticketing applications with PHP, Laravel and MySQL, including SAP integration. I have worked on 4 real company applications. I built one of them completely by myself.</p>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><button class="btn rs" type="button">Download resume</button><a class="btn" href="mailto:buvanaragupathy2023@gmail.com">Email me</a><a class="btn" href="https://github.com/Buvana-Ragupathy-Dev">GitHub</a></div>
+</div>
+<div class="side"><img class="av" id="photo" alt="Buvana Ragupathy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%235b5bf0'/%3E%3Ccircle cx='100' cy='78' r='36' fill='%23fff' fill-opacity='.9'/%3E%3Cpath d='M30 200c0-44 31-72 70-72s70 28 70 72z' fill='%23fff' fill-opacity='.9'/%3E%3C/svg%3E">
+<div class="stats">
+<div class="stat"><b>1+ yr</b><span>Production experience</span></div>
+<div class="stat"><b>4</b><span>Company applications</span></div>
+<div class="stat"><b>9.22</b><span>MCA CGPA / 10</span></div>
+<div class="stat"><b>10th</b><span>Anna University rank</span></div>
+</div></div>
+</header>
+
+<section id="about">
+<h2>About</h2><p class="sub">Workflow-focused developer from Cuddalore, Tamil Nadu.</p>
+<div class="card"><p style="margin:0 0 12px">I’m a software developer from Cuddalore who likes turning real business rules into software people can rely on every day. Most of my work is around approval workflows: who acts next, what happens on a rejection, and how to keep things moving with the right alerts.</p><p style="margin:0 0 12px">I enjoy owning what I build, from the database schema to the screens, and supporting it after it goes live. Outside work, I built Leave Tracker on my own to keep learning full-stack development with React, Node.js and MySQL.</p><p style="margin:0">I’m now looking for a software developer role where I can keep building and growing on real systems.</p></div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2><p class="sub">What I use day to day, and what I’m familiar with.</p>
+<div class="grid">
+<div class="card"><h3>Core</h3><div class="tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span><span class="tag">Git &amp; GitHub</span><span class="tag">Postman</span></div></div>
+<div class="card"><h3>Familiar with</h3><div class="tags"><span class="tag t2">CodeIgniter</span><span class="tag t2">Java</span><span class="tag t2">Spring Boot</span><span class="tag t2">React</span><span class="tag t2">Node.js</span><span class="tag t2">Express</span><span class="tag t2">MongoDB</span><span class="tag t2">Python (basics)</span></div></div>
+<div class="card"><h3>Concepts &amp; tools</h3><div class="tags"><span class="tag">OOP</span><span class="tag">Debugging</span><span class="tag">Performance optimization</span><span class="tag">DSA fundamentals</span><span class="tag">VS Code</span><span class="tag">IntelliJ IDEA</span></div></div>
+<div class="card"><h3>AI-assisted development</h3><div class="tags"><span class="tag t2">GitHub Copilot</span><span class="tag t2">ChatGPT</span><span class="tag t2">Claude</span><span class="tag t2">Gemini</span><span class="tag t2">Amazon Q</span><span class="tag t2">Zencoder</span></div></div>
+</div>
+</section>
+
+<section id="exp">
+<h2>Experience</h2><p class="sub">Live production work in enterprise environments.</p>
+<div class="card tl">
+<div class="d">Dec 2024 – Jan 2026 · Cuddalore, Tamil Nadu</div>
+<h3>Trainee Software Developer</h3><div style="color:var(--mu)">Hema’s Enterprises Private Limited</div>
+<ul>
+<li>Developed and supported enterprise approval and ticketing applications in production using PHP, Laravel, CodeIgniter, React, Java and MySQL.</li>
+<li>Started on iView under a senior developer, then took over its maintenance, enhancements and support; independently built the Sales Return application from the start.</li>
+<li>Built role-based approval workflows with email notifications and SAP integration; worked with business, QA, SAP and support teams.</li>
+<li>Debugged and tested applications (APIs with Postman), optimized database queries and assisted with production deployments with minimal downtime.</li>
+</ul></div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2><p class="sub">Approval workflows, integrations and full-stack apps.</p>
+<div class="filters">
+<button class="f on" data-f="all">All</button><button class="f" data-f="work">Professional</button><button class="f" data-f="personal">Personal</button><button class="f" data-f="edu">Academic</button><button class="f" data-f="sap">SAP</button>
+</div>
+<div class="grid" id="pg">
+
+<article class="card proj" data-c="work sap">
+<span class="k">Professional · Took over ownership</span><h3>iView: Invoice Ticketing Platform</h3>
+<p>Takes an invoice from upload to closure through a role-based approval chain, running as separate instances for several companies, plants and sub-organizations.</p>
+<div class="flow"><i>Scanner</i>→<i>Maker</i>→<i>Approver</i>→<i>Head</i>→<i>Finance</i>→<i>QC</i>→<i>Closed</i></div>
+<details><summary>Highlights</summary><ul>
+<li>A rejected ticket returns one step to whoever assigned it</li>
+<li>SAP API validates PO numbers</li>
+<li>Email alerts, daily summary and reminders that escalate to a supervisor</li>
+<li>Multi-organization setup</li></ul></details>
+<div class="tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">SAP API</span></div>
+</article>
+
+<article class="card proj" data-c="work sap">
+<span class="k">Professional · Built independently</span><h3>Sales Return Approval Workflow</h3>
+<p>Receives sales return requests from SAP automatically, validates product shelf life and routes them through two approval levels.</p>
+<div class="flow"><i>SAP</i>→<i>Shelf-life check</i>→<i>L1</i>→<i>L2</i>→<i>Zonal manager</i></div>
+<details><summary>Highlights</summary><ul>
+<li>Shelf life calculated from manufacturing date</li>
+<li>L2 rejections go back to L1; L1 rejections land in a trackable Rejected tab</li>
+<li>Automatic email to zonal managers after final approval</li>
+<li>Designed, built, tested and supported solo</li></ul></details>
+<div class="tags"><span class="tag">React</span><span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">SAP</span></div>
+</article>
+
+<article class="card proj" data-c="work">
+<span class="k">Professional</span><h3>Bill Tracker</h3>
+<p>Package submissions that need approval from several designations, with each approver seeing only what they must act on.</p>
+<div class="flow"><i>Submit</i>→<i>Approver</i>→<i>Next approver</i>→<i>Final</i></div>
+<details><summary>Highlights</summary><ul>
+<li>Structured authorization workflow across designations</li>
+<li>Separate approver logins</li>
+<li>Real-time status tracking</li></ul></details>
+<div class="tags"><span class="tag">Laravel</span><span class="tag">MySQL</span></div>
+</article>
+
+<article class="card proj" data-c="work">
+<span class="k">Professional</span><h3>MyBuddy–Xenon Sales Integration</h3>
+<p>Connects two separate sales and employee systems so approvals and data work across both instead of being managed twice.</p>
+<details><summary>Highlights</summary><ul>
+<li>ASM and RSSM approval workflows within the MyBuddy sales flow</li>
+<li>Synchronized employee, salary and sales reporting data</li></ul></details>
+<div class="tags"><span class="tag">CodeIgniter</span><span class="tag">React</span><span class="tag">Java</span><span class="tag">MySQL</span></div>
+</article>
+
+<article class="card proj" data-c="personal">
+<span class="k">Personal Project · Built solo</span><h3>Leave Tracker</h3>
+<p>A full-stack leave management app where employees apply and track leave, managers approve their team’s requests, and admins manage employees and the holiday calendar.</p>
+<div class="flow"><i>Apply</i>→<i>Validate</i>→<i>Manager review</i>→<i>Balance update</i>→<i>Audit log</i></div>
+<details><summary>Highlights</summary><ul>
+<li>JWT auth, role-based access and multi-role users (e.g. manager and employee)</li>
+<li>Live working-day count that excludes weekends and holidays</li>
+<li>Overlap prevention; balance deducted on approval inside a database transaction</li>
+<li>Append-only audit log, readable ticket numbers, search, filters and pagination</li>
+<li>AES-128-CBC encrypted IDs in URLs; counting and filtering done in SQL</li></ul></details>
+<div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span><span class="tag">JWT</span></div>
+</article>
+
+<article class="card proj" data-c="edu">
+<span class="k">MCA Project</span><h3>Dynamic Issue Tracking &amp; Notification System</h3>
+<p>Manages the full lifecycle of hardware and software issues with multi-level review, remarks at every step and a full audit trail.</p>
+<div class="flow"><i>Requester</i>→<i>Reviewers</i>→<i>Final approver</i>→<i>Confirm</i>→<i>Closed</i></div>
+<details><summary>Highlights</summary><ul>
+<li>Roles: Requester, Team Leader, IT Infra Head, IT Infra Employee, Admin</li>
+<li>Approve or revert with detailed remarks; image uploads</li>
+<li>Activity log of every action; admin dashboard</li>
+<li>Real-time notifications to requesters</li></ul></details>
+<div class="tags"><span class="tag">Laravel</span><span class="tag">MySQL</span></div>
+</article>
+
+<article class="card proj" data-c="edu">
+<span class="k">BCA Project</span><h3>A3 Music Website</h3>
+<p>A responsive platform to browse songs, artists, albums and playlists, with dynamic pages rendered by PHP.</p>
+<details><summary>Highlights</summary><ul>
+<li>Song, artist, album and playlist pages</li>
+<li>Responsive layout for any screen size</li>
+<li>Efficient data handling</li></ul></details>
+<div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+</article>
+
+</div>
+</section>
+
+<section id="edu">
+<h2>Education</h2><p class="sub">&nbsp;</p>
+<div class="card tl">
+<div class="d">2023 – 2025</div><h3>Master of Computer Applications (MCA)</h3>
+<div style="color:var(--mu)">Krishnasamy College of Engineering and Technology, affiliated to Anna University</div>
+<div class="tags" style="margin-top:10px"><span class="tag">CGPA 9.22 / 10</span><span class="tag t2">Anna University 10th Rank</span></div>
+</div>
+<div class="card tl" style="margin-top:16px">
+<div class="d">2020 – 2023</div><h3>Bachelor of Computer Applications (BCA)</h3>
+<div style="color:var(--mu)">St. Joseph’s College of Arts &amp; Science, affiliated to Thiruvalluvar University</div>
+<div class="tags" style="margin-top:10px"><span class="tag">CGPA 8.15 / 10</span></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let’s work together</h2>
+<p class="sub">Looking for software developer roles. Get in touch.</p>
+<div class="cl">
+<a class="btn p" href="mailto:buvanaragupathy2023@gmail.com">buvanaragupathy2023@gmail.com</a>
+<a class="btn" href="tel:+918778482977">8778482977</a>
+<button class="btn rs" type="button">Download resume</button>
+<a class="btn" href="https://linkedin.com/in/buvana-ragupathy">LinkedIn</a>
+<a class="btn" href="https://github.com/Buvana-Ragupathy-Dev">GitHub</a>
+</div>
+</section>
+</main>
+<footer>© <span id="y"></span> Buvana Ragupathy · Cuddalore, Tamil Nadu, India</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+var RESUME='JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2JqCjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvQ29udGVudHMgNCAwIFIgL1Jlc291cmNlcyA8PCAvRm9udCA8PCAvRjEgNSAwIFIgPj4gPj4gPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAxMzkgPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZiA3MiA3NDAgVGQgKEJ1dmFuYSBSYWd1cGF0aHkgLSBSZXN1bWUpIFRqIC9GMSAxNCBUZiAwIC00MCBUZCAoRHVtbXkgcmVzdW1lLiBSZXBsYWNlIHRoaXMgZmlsZSB3aXRoIHlvdXIgcmVhbCByZXN1bWUgUERGLikgVGogRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSA+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAwIG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDExNSAwMDAwMCBuIAowMDAwMDAwMjQxIDAwMDAwIG4gCjAwMDAwMDA0MzEgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSA2IC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgo1MDEKJSVFT0Y=';
+function noDl(){document.querySelectorAll('.rs').forEach(function(x){x.classList.add('hid')})}
+if(window.claude&&claude.use){claude.use('downloads').then(function(d){if(!d)noDl()},noDl)}else{noDl()}
+document.querySelectorAll('.rs').forEach(function(x){x.onclick=function(){claude.use('downloads').then(function(d){if(!d)return;var s=atob(RESUME),u=new Uint8Array(s.length);for(var i=0;i<s.length;i++)u[i]=s.charCodeAt(i);return d.save({filename:'Buvana_Ragupathy_Resume.pdf',data:u})}).catch(function(){})}});
+var r=document.documentElement,b=document.getElementById('th');
+b.onclick=function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.setAttribute('data-theme',d==='dark'?'light':'dark')};
+document.querySelectorAll('.f').forEach(function(f){f.onclick=function(){
+document.querySelectorAll('.f').forEach(function(x){x.classList.remove('on')});f.classList.add('on');
+var k=f.dataset.f;document.querySelectorAll('#pg .proj').forEach(function(p){p.classList.toggle('hid',k!=='all'&&p.dataset.c.split(' ').indexOf(k)<0)})}});
+</script>
+</body>
+</html>
