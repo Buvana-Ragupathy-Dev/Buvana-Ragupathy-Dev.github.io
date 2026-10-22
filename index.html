@@ -74,9 +74,9 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 <h1>Hi, I’m <em>Buvana Ragupathy</em></h1>
 <p style="font-size:20px;margin:0 0 8px;font-weight:600">Software Developer</p>
 <p class="lead">I build enterprise approval and ticketing applications with PHP, Laravel and MySQL, including SAP integration. I have worked on 4 real company applications. I built one of them completely by myself.</p>
-<div class="btns"><a class="btn p" href="#projects">View projects</a><button class="btn rs" type="button">Download resume</button><a class="btn" href="mailto:buvanaragupathy2023@gmail.com">Email me</a><a class="btn" href="https://github.com/Buvana-Ragupathy-Dev">GitHub</a></div>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn rs" href="Documents/Buvana_Ragupathy_Software_Developer_Resume.pdf" download>Download resume</a><a class="btn" href="mailto:buvanaragupathy2023@gmail.com">Email me</a><a class="btn" href="https://github.com/Buvana-Ragupathy-Dev">GitHub</a></div>
 </div>
-<div class="side"><img class="av" id="photo" alt="Buvana Ragupathy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%235b5bf0'/%3E%3Ccircle cx='100' cy='78' r='36' fill='%23fff' fill-opacity='.9'/%3E%3Cpath d='M30 200c0-44 31-72 70-72s70 28 70 72z' fill='%23fff' fill-opacity='.9'/%3E%3C/svg%3E">
+<div class="side"><img class="av" id="photo" alt="Buvana Ragupathy" src="Documents/Buvana_Ragupathy_Photo.jpg">
 <div class="stats">
 <div class="stat"><b>1+ yr</b><span>Production experience</span></div>
 <div class="stat"><b>4</b><span>Company applications</span></div>
@@ -222,7 +222,7 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 <div class="cl">
 <a class="btn p" href="mailto:buvanaragupathy2023@gmail.com">buvanaragupathy2023@gmail.com</a>
 <a class="btn" href="tel:+918778482977">8778482977</a>
-<button class="btn rs" type="button">Download resume</button>
+<a class="btn rs" href="Documents/Buvana_Ragupathy_Software_Developer_Resume.pdf" download>Download resume</a>
 <a class="btn" href="https://linkedin.com/in/buvana-ragupathy">LinkedIn</a>
 <a class="btn" href="https://github.com/Buvana-Ragupathy-Dev">GitHub</a>
 </div>
@@ -232,10 +232,6 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0}
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
-var RESUME='JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2JqCjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvQ29udGVudHMgNCAwIFIgL1Jlc291cmNlcyA8PCAvRm9udCA8PCAvRjEgNSAwIFIgPj4gPj4gPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAxMzkgPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZiA3MiA3NDAgVGQgKEJ1dmFuYSBSYWd1cGF0aHkgLSBSZXN1bWUpIFRqIC9GMSAxNCBUZiAwIC00MCBUZCAoRHVtbXkgcmVzdW1lLiBSZXBsYWNlIHRoaXMgZmlsZSB3aXRoIHlvdXIgcmVhbCByZXN1bWUgUERGLikgVGogRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSA+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAwIG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDExNSAwMDAwMCBuIAowMDAwMDAwMjQxIDAwMDAwIG4gCjAwMDAwMDA0MzEgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSA2IC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgo1MDEKJSVFT0Y=';
-function noDl(){document.querySelectorAll('.rs').forEach(function(x){x.classList.add('hid')})}
-if(window.claude&&claude.use){claude.use('downloads').then(function(d){if(!d)noDl()},noDl)}else{noDl()}
-document.querySelectorAll('.rs').forEach(function(x){x.onclick=function(){claude.use('downloads').then(function(d){if(!d)return;var s=atob(RESUME),u=new Uint8Array(s.length);for(var i=0;i<s.length;i++)u[i]=s.charCodeAt(i);return d.save({filename:'Buvana_Ragupathy_Resume.pdf',data:u})}).catch(function(){})}});
 var r=document.documentElement,b=document.getElementById('th');
 b.onclick=function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.setAttribute('data-theme',d==='dark'?'light':'dark')};
 document.querySelectorAll('.f').forEach(function(f){f.onclick=function(){
